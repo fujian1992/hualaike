@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>的的模板</title>
+<meta name="description" content="dedecms57.com 的的模板" />
+<meta name="keywords" content="的的模板" />
+<link href="./templets/default/style/style.css" rel="stylesheet" media="screen" type="text/css" />
+<script language="javascript" type="text/javascript" src="./include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript" src="./images/js/j.js" ></script>
+<script language="javascript" type="text/javascript" src="./templets/default/js/pic_scroll.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+	$(function(){
+		$("a[_for]").mouseover(function(){
+			$(this).parents().children("a[_for]").removeClass("thisclass").parents().children("dd").hide();
+			$(this).addClass("thisclass").blur();
+			$("#"+$(this).attr("_for")).show();
+		});
+		$("a[_for=uc_member]").mouseover();
+		$("a[_for=flink_1]").mouseover();
+	});
+	
+	function CheckLogin(){
+	  var taget_obj = document.getElementById('_userlogin');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/member/ajax_loginsta.php");
+	  DedeXHTTP = null;
+	}
+-->
+</script>
+<script type="text/javascript" src="./templets/default/js/jquery.js"></script>
+<script type="text/javascript" src="./templets/default/js/superslide.2.1.js"></script>
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="index">
+<div class="fwtop">
+<div class="fwtop_head">
+  <div class="fwtop_logo">
+    <div class="top_logo" id="top_logo">
+	<img src="./templets/default/images/logo.png" width="400" height="100" alt="网站Logo" title="test"/></div>
+
+  </div>
+  <div class="fwtop_info">
+    <div class="topSearch clear" id="topSearch">
+	<div class="search"><img src="#" /></div>
+<script type="text/javascript">
+siteSearch()
+</script>
+<script type="text/javascript">
+	$("#siteSearchContent").focus(function(){
+		if (this.value == "请输入关键字..."){
+		this.value = ""
+		}
+	});
+	$("#siteSearchContent").blur(function(){
+		if (this.value == "") {
+		this.value = "请输入关键字...";
+		}
+	});
+</script>
+
+</div>
+
+  </div>
+  <div class="clear"></div>
+ </div>
+  <div class="fwtop_mainNav">
+    <div class="siteMainNav fwtop_nav fwnavlink" id="siteMainNav" >
+	<ul>
+		<li><a href='/'><span>主页</span></a></li>
+      	
+      	<li><a href='./anli/list_5_1.html' ><span>案例展示</span></a></li>
+      	
+      	<li><a href='/about/'  rel='dropmenu2'><span>关于我们</span></a></li>
+      	
+      	<li><a href='/news/'  rel='dropmenu3'><span>新闻动态</span></a></li>
+      	
+      	<li><a href='/job/'  rel='dropmenu6'><span>人才招聘</span></a></li>
+      	
+      	<li><a href='/lianxi/' ><span>联系我们</span></a></li>
+      	
+      	<li><a href='/chanpin/'  rel='dropmenu4'><span>产品中心</span></a></li>
+      	
+	</ul>
+<div class="clear"></div>
+</div>
+  </div>
+  <div class="clear"></div>
+  <div class="fwtop_banner">
+    <script type="text/javascript">
+var ary = location.href.split("&");
+jQuery("#siteBanner").slide( { mainCell:"#bd ul", effect:"fold",autoPlay:"true",trigger:"mouseover",easing:"swing",delayTime:"1000",mouseOverStop:"true",pnLoop:"true"});
+</script>
+
+  </div>
+</div>
+
+<div class="fullSlide">
+  <div class="bd">
+    <ul>
+      <li _src="url(./templets/default/images/1.jpg)" style="background:#E2025E center 0 no-repeat;"></li>
+      <li _src="url(./templets/default/images/007.png)" style="background:#DED5A1 center 0 no-repeat;"</li>
+      <li _src="url(./templets/default/images/3.jpg)" style="background:#B8CED1 center 0 no-repeat;"></li>
+      <li _src="url(./templets/default/images/4.jpg)" style="background:#98918E center 0 no-repeat;"></li>
+      <li _src="url(./templets/default/images/5.jpg)" style="background:#FEFF19 center 0 no-repeat;"></li>
+    </ul>
+  </div>
+  <div class="hd">
+    <ul>
+    </ul>
+  </div>
+  <span class="prev"></span> <span class="next"></span> </div>
+<script type="text/javascript">
+jQuery(".fullSlide").hover(function() {
+    jQuery(this).find(".prev,.next").stop(true, true).fadeTo("show", 0.5)
+},
+function() {
+    jQuery(this).find(".prev,.next").fadeOut()
+});
+jQuery(".fullSlide").slide({
+    titCell: ".hd ul",
+    mainCell: ".bd ul",
+    effect: "fold",
+    autoPlay: true,
+    autoPage: true,
+    trigger: "click",
+    startFun: function(i) {
+        var curLi = jQuery(".fullSlide .bd li").eq(i);
+        if ( !! curLi.attr("_src")) {
+            curLi.css("background-image", curLi.attr("_src")).removeAttr("_src")
+        }
+    }
+});
+</script>
+<div style="margin:10px auto; width:1000px;">
+<div>
+<div class="inn1">
+<p><span><a href="/about/"><img src="./templets/default/images/more.jpg" border="0" /></a></span><strong>关于我们</strong></p>
+<div style="padding:10px;">
+<img src="./templets/default/images/20140220155815681568.jpg" />
+<br />
+崋莱科环境设备有限公司是一家专业从事中央空调、无尘净化、恒温恒湿设计安装及维护保养，环保通风、废气、工业水处理及废水回收工程，空调、冰箱及冷柜实验安装，现代农业种植
+    环境设备设计安装，通风管道、水电工程设计安装的企业。</div>
+	 </div>
+<div class="inn2">
+<p><span><a href="/news/"><img src="./templets/default/images/more.jpg" alt="/news/" /></a></span><strong>新闻动态</strong></p>
+<div class="inn4">
+<li><span>03-04</span><a href="./news/2014/0304/16.html">我司与佛山南方塑胶有限公司拌粉车间粉尘治理项目签约</a></li>
+<li><span>03-04</span><a href="./news/2014/0304/15.html">中央空调安装，有哪些需要注意的？</a></li>
+<li><span>03-04</span><a href="./news/2014/0304/14.html">恭祝崋莱科环境设备有限公司网站开通</a></li>
+<li><span>03-04</span><a href="./news/2014/0304/13.html">中央空调安装 技术创新高引领潮流。</a></li>
+<li><span>03-04</span><a href="./news/2014/0304/12.html">河北电镀园区领导及车间负责人一行十余人对我公司进行考察</a></li>
+<li><span>03-04</span><a href="./news/2014/0304/11.html">宁波永强不锈钢打磨车间20个打磨工位粉尘治理项目签约。</a></li>
+
+</div>
+</div>
+<div class="inn3">
+<p><span><a href="/lianxi/"><img src="./templets/default/images/more.jpg" border="0" /></a></span><strong>联系方式</strong></p>
+<div style="padding:10px; line-height:22px;">
+<img src="./templets/default/images/20140220154924552455.jpg" width="230" height="90" />
+地 址：佛山市顺德区容桂扁窖社区兴华路10号北金碧豪庭17号<br />
+电 话：0757-28325183<br />
+Q  Q：836284074<br />
+邮 箱：836284074@qq.com</div>
+</div>
+<div style="clear:both"></div>
+</div>
+<div class="inn5">
+<p><span><a href="/chanpin/"><img src="./templets/default/images/more.jpg" border="0" /></a></span><strong>产品展示</strong></p>
+<ul>
+				<li><a href="/chanpin/2014/0304/26.html"><img src="./uploads/allimg/140304/1-1403040922250-L.jpg" alt="" /></a><p><a href="/chanpin/2014/0304/26.html">产品标题名称十</a></p></li>
+<li><a href="/chanpin/2014/0304/25.html"><img src="./uploads/allimg/140304/1-1403040921510-L.jpg" alt="" /></a><p><a href="/chanpin/2014/0304/25.html">产品标题名称九</a></p></li>
+<li><a href="/chanpin/2014/0304/24.html"><img src="./uploads/allimg/140304/1-1403040921270-L.jpg" alt="" /></a><p><a href="/chanpin/2014/0304/24.html">产品标题名称八</a></p></li>
+<li><a href="/chanpin/2014/0304/23.html"><img src="./uploads/allimg/140304/1-1403040919410-L.jpg" alt="" /></a><p><a href="/chanpin/2014/0304/23.html">产品标题名称七</a></p></li>
+<li><a href="/chanpin/2014/0304/22.html"><img src="./uploads/allimg/140304/1-1403040919220-L.jpg" alt="" /></a><p><a href="/chanpin/2014/0304/22.html">产品标题名称六</a></p></li>
+	
+	</ul>
+</div>
+
+
+</div>	
+<div class="clear"></div>
+<div class="fwbottom">
+		<div class="fwbottom_bottomInfo">
+				<div class="siteBottomNav">
+<ul>
+
+      	<li><a href='/anli/list_5_1.html' ><span>案例展示</span></a></li>
+      	
+      	<li><a href='/about/'  rel='dropmenu2'><span>关于我们</span></a></li>
+      	
+      	<li><a href='/news/'  rel='dropmenu3'><span>新闻动态</span></a></li>
+      	
+      	<li><a href='/job/'  rel='dropmenu6'><span>人才招聘</span></a></li>
+      	
+      	<li><a href='/lianxi/' ><span>联系我们</span></a></li>
+      	
+      	<li><a href='/chanpin/'  rel='dropmenu4'><span>产品中心</span></a></li>
+      	
+<div class="clear"></div>
+</ul>
+</div>
+<div class="bottomInfo clear">
+	<p align="center">
+	<span style="color:#fff;"><a href="http://www.dedecms57.com" target="_blank">千套网站源码</a></span> 
+</p>
+</div>
+
+		</div>
+        
+	</div>
+</body>
+</html>
