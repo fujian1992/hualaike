@@ -19,5 +19,5 @@ import jindex
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^/$',include(jindex.urls)),
+    url(r'^/$',include('jindex.urls')),
 ]
