@@ -4,7 +4,8 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
+    context={}
 
-    return HttpResponse('hello')
+    return render(request,'templates/jindex/index.html',context)
 
 
