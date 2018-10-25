@@ -28,9 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, 'templates'),
-)
+# TEMPLATE_DIRS = (
+#     os.path.join(BASE_DIR, 'templates'),
+# )
 # Application definition
 
 INSTALLED_APPS = (
@@ -60,8 +60,9 @@ ROOT_URLCONF = 'hualaike.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),],
+        'APP_DIRS': False,
+        #'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
