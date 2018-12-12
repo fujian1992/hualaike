@@ -10,5 +10,7 @@ def index(request):
 
 
 def news(request,parms):
+    print '============'
+    print parms
     context ={}
     return render(request,'news/2014/0304'+parms,context)
