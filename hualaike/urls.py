@@ -21,5 +21,5 @@ import views
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^',views.index),
-    url(r'^list/&',include('jindex.urls')),
+    url(r'^list/',include('jindex.urls')),
 ]
