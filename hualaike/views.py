@@ -5,5 +5,6 @@ from django.http import HttpResponse
 
 def index(request):
     context={}
+    print 'hdksghjksd================dfsdfsdf'
 
     return render(request,'jindex/index.html',context)
