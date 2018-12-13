@@ -21,6 +21,6 @@ import views
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$',views.index),
-    url(r'^news/$', views.news,name='news'),
+    url(r'^news/(.+)$', views.news,name='news'),
     # url(r'^list/',include('jindex.urls')),
 ]

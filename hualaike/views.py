@@ -8,8 +8,8 @@ def index(request):
     print 'hdksghjksd================dfsdfsdf'
 
     return render(request,'jindex/index.html',context)
-def news(request):
+def news(request,parms):
     print '============'
     # print parms
     context ={}
-    return render(request,'news/2014/0304/11.html',context)
+    return render(request,'news/2014/0304/'+parms,context)
