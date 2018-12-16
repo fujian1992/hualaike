@@ -22,5 +22,12 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$',views.index),
     url(r'^news/(.+)$', views.news,name='news'),
+    url(r'^company/(.+)$', views.company, name='company'),
+    url(r'^case/(.+)$', views.case, name='case'),
+    url(r'^about/(.+)$', views.about, name='about'),
+    url(r'^job/(.+)$', views.job, name='job'),
+    url(r'^connection/(.+)$', views.connection, name='connection'),
+    url(r'^product/(.+)$', views.product, name='product'),
+
     # url(r'^list/',include('jindex.urls')),
 ]
