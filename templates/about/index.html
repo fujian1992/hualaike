@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>关于我们  /  公司简介_蓝色大气企业网站</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="/templets/default/style/style.css" rel="stylesheet" media="screen" type="text/css" />
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+function CheckLogin(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="articleview">
+<div class="fwtop">
+<div class="fwtop_head">
+  <div class="fwtop_logo">
+    <div class="top_logo" id="top_logo">
+	<img src="/templets/default/images/logo.png" width="400" height="100" alt="网站Logo" title="test"/></div>
+
+  </div>
+  <div class="fwtop_info">
+    <div class="topSearch clear" id="topSearch">
+	<div class="search"><img src="/templets/default/images/dh.png" width="301" height="96" /></div>
+<script type="text/javascript">
+siteSearch()
+</script>
+<script type="text/javascript">
+	$("#siteSearchContent").focus(function(){
+		if (this.value == "请输入关键字..."){
+		this.value = ""
+		}
+	});
+	$("#siteSearchContent").blur(function(){
+		if (this.value == "") {
+		this.value = "请输入关键字...";
+		}
+	});
+</script>
+
+</div>
+
+  </div>
+  <div class="clear"></div>
+ </div>
+  <div class="fwtop_mainNav">
+    <div class="siteMainNav fwtop_nav fwnavlink" id="siteMainNav" >
+	<ul>
+		<li><a href='/'><span>主页</span></a></li>
+      	
+      	<li><a href='/anli/list_5_1.html' ><span>案例展示</span></a></li>
+      	<li class='hover'><a href='/about/'  rel='dropmenu2'><span>关于我们</span></a></li>
+      	<li><a href='/news/'  rel='dropmenu3'><span>新闻动态</span></a></li>
+      	
+      	<li><a href='/job/'  rel='dropmenu6'><span>人才招聘</span></a></li>
+      	
+      	<li><a href='/lianxi/' ><span>联系我们</span></a></li>
+      	
+      	<li><a href='/chanpin/'  rel='dropmenu4'><span>产品中心</span></a></li>
+      	
+	</ul>
+<div class="clear"></div>
+</div>
+  </div>
+  <div class="clear"></div>
+  <div class="fwtop_banner">
+    <script type="text/javascript">
+var ary = location.href.split("&");
+jQuery("#siteBanner").slide( { mainCell:"#bd ul", effect:"fold",autoPlay:"true",trigger:"mouseover",easing:"swing",delayTime:"1000",mouseOverStop:"true",pnLoop:"true"});
+</script>
+
+  </div>
+</div>
+<div class="dha"></div>
+<div class="fwmain">
+		<div class="fwmain_nleft edit_putHere" id="edit_putHere_area1" saveTitle="area1">
+			<div class="label clear fwtop_nav6" id="597" rel="597" titles="竖形分类菜单">
+	<div class="label_head">
+		<div class="label_title">公司简介</div>
+	</div>
+	<div class="label_content">
+
+<h1 ><a href='/about/'>公司简介</a></h1>
+
+<h1 ><a href='/about/list_9_1.html'>企业文化</a></h1>
+
+<h1 ><a href='/about/list_10_1.html'>荣誉资质</a></h1>
+
+<h1 ><a href='/about/list_11_1.html'>招商加盟</a></h1>
+ 
+	</div>
+	<div class="label_foot"></div>
+</div>
+<div class="label clear" id="599" rel="599" titles="自定义内容">
+	<div class="label_head">
+		<div class="label_title">联系我们</div>
+	</div>
+	<div class="label_content">
+		<div class="about_con clearfix">
+		地 址：杭州市xxxxxx路xxx<br />
+号 电 话：0000-00000000<br />
+传 真：0000-00000000<br />
+邮 箱：138905022@qq.com
+		</div>
+	</div>
+	<div class="label_foot"></div>
+</div>
+	
+		</div>
+		<div class="fwmain_nright edit_putHere" id="edit_putHere_area2" saveTitle="area2">
+			<div class="label clear" id="600" rel="600" titles="自定义内容">
+	<div class="label_head">
+	<div class="label_title"><span><a href='http://demo3.xgwu.net/'>主页</a> > <a href='/about/'>关于我们</a> > <a href='/about/'>公司简介</a> > </span>公司简介</div>
+	</div>
+	<div class="label_content">
+		<div class="about_con clearfix">
+			&nbsp;&nbsp;&nbsp;&nbsp; 郑州驿路计算机技术有限公司旗下模板分享平台爱淘站（<a href="http://www.aitaozhan.com">www.aitaozhan.com</a>）专注于提供网页模板及建站常用素材资源教程。通过整合团队专业的市场营销理念与网络技术为客户提供优质的网络营销服务。<br />
+&nbsp;&nbsp;&nbsp;&nbsp; 驿路科技的主要业务包括：网站系统开发、网站建设、网站推广、空间域名以及网络营销策划与运行。<br />
+&nbsp;&nbsp;&nbsp;&nbsp; 旗下模板平台爱淘站提供了数百套优质网站模板和数千套免费的网站模板，模板涉及企业/门户、商城等多个类型和行业。模板采用织梦和aspcms及当下流行的cms为内核进行二次开发，内置了SEO搜索引擎优化机制，拥有企业网站常用的模块功能（企业简介模块、新闻模块、产品模块、下载模块、图片模块、招聘模块、在线留言、反馈系统、在线交流、友情链接、网站地图、会员与权限管理）。强大灵活的后台管理功能、静态页面生成功能、个性化模块添加功能等可为企业打造出大气漂亮且具有营销力的精品网站。<br />
+&nbsp;&nbsp;&nbsp;&nbsp; 爱淘站秉承&ldquo;为合作伙伴创造价值&rdquo;的核心价值观，并以&ldquo;诚实、宽容、创新、服务&rdquo;为企业精神，通过自主创新和真诚合作为电子商务及信息服务行业创造价值。<br />
+关于&ldquo;为合作伙伴创造价值&rdquo;<br />
+&nbsp;&nbsp;&nbsp;&nbsp; 爱淘站认为客户、供应商、公司股东、公司员工等一切和自身有合作关系的单位和个人都是自己的合作伙伴，并只有通过努力为合作伙伴创造价值，才能体现自身的价值并获得发展和成功。<br />
+关于&ldquo;诚实、宽容、创新、服务&rdquo;<br />
+&nbsp;&nbsp;&nbsp;&nbsp; 爱淘站认为诚信是一切合作的基础，宽容是解决问题的前提，创新是发展事业的利器，服务是创造价值的根本&nbsp;
+		</div>
+	</div>
+	<div class="label_foot"></div>
+</div>
+
+		</div>
+		<div class="clear"></div>
+	</div>	
+<div class="fwbottom">
+		<div class="fwbottom_bottomInfo">
+				<div class="siteBottomNav">
+<ul>
+
+      	<li><a href='/anli/list_5_1.html' ><span>案例展示</span></a></li>
+      	<li class='hover'><a href='/about/'  rel='dropmenu2'><span>关于我们</span></a></li>
+      	<li><a href='/news/'  rel='dropmenu3'><span>新闻动态</span></a></li>
+      	
+      	<li><a href='/job/'  rel='dropmenu6'><span>人才招聘</span></a></li>
+      	
+      	<li><a href='/lianxi/' ><span>联系我们</span></a></li>
+      	
+      	<li><a href='/chanpin/'  rel='dropmenu4'><span>产品中心</span></a></li>
+      	
+<div class="clear"></div>
+</ul>
+</div>
+<div class="bottomInfo clear">
+	<p align="center">
+	<span style="color:#fff;"><a href="http://www.xgwu.net" target="_blank">享购屋</a></span> 
+</p>
+</div>
+
+		</div>
+        
+	</div>
+</body>
+</html>
