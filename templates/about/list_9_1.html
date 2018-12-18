@@ -2,11 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="http://i1.social.s-msft.com/Forums/GlobalResources/images/Msdn/favicon.ico" type="image/x-icon" />
 <title>关于我们  /  企业文化_蓝色大气企业网站</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<link href="/templets/default/style/style.css" rel="stylesheet" media="screen" type="text/css" />
-<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<link href="/static/css/style.css" rel="stylesheet" media="screen" type="text/css" />
+<script language="javascript" type="text/javascript" src="/static/js/dedeajax2.js"></script>
 <script language="javascript" type="text/javascript">
 <!--
 function CheckLogin(){
@@ -96,12 +97,11 @@ function getDigg(aid)
 <div class="fwtop_head">
   <div class="fwtop_logo">
     <div class="top_logo" id="top_logo">
-	<img src="/templets/default/images/logo.png" width="400" height="100" alt="网站Logo" title="test"/></div>
+	<img src="/static/images/logo.png" width="400" height="100" alt="网站Logo" title="test"/></div>
 
   </div>
   <div class="fwtop_info">
     <div class="topSearch clear" id="topSearch">
-	<div class="search"><img src="/templets/default/images/dh.png" width="301" height="96" /></div>
 <script type="text/javascript">
 siteSearch()
 </script>
@@ -125,20 +125,7 @@ siteSearch()
  </div>
   <div class="fwtop_mainNav">
     <div class="siteMainNav fwtop_nav fwnavlink" id="siteMainNav" >
-	<ul>
-		<li><a href='/'><span>主页</span></a></li>
-      	
-      	<li><a href='/anli/list_5_1.html' ><span>案例展示</span></a></li>
-      	<li class='hover'><a href='/about/'  rel='dropmenu2'><span>关于我们</span></a></li>
-      	<li><a href='/news/'  rel='dropmenu3'><span>新闻动态</span></a></li>
-      	
-      	<li><a href='/job/'  rel='dropmenu6'><span>人才招聘</span></a></li>
-      	
-      	<li><a href='/lianxi/' ><span>联系我们</span></a></li>
-      	
-      	<li><a href='/chanpin/'  rel='dropmenu4'><span>产品中心</span></a></li>
-      	
-	</ul>
+	{% include "nav.html" %}
 <div class="clear"></div>
 </div>
   </div>
@@ -177,10 +164,10 @@ jQuery("#siteBanner").slide( { mainCell:"#bd ul", effect:"fold",autoPlay:"true",
 	</div>
 	<div class="label_content">
 		<div class="about_con clearfix">
-		地 址：杭州市xxxxxx路xxx<br />
-号 电 话：0000-00000000<br />
-传 真：0000-00000000<br />
-邮 箱：138905022@qq.com
+		地 址：佛山市顺德区容桂扁窖社区兴华路10号北金碧豪庭17号<br />
+        电 话：0757-28325183<br />
+        Q  Q：836284074<br />
+        邮 箱：836284074@qq.com
 		</div>
 	</div>
 	<div class="label_foot"></div>
@@ -209,25 +196,7 @@ jQuery("#siteBanner").slide( { mainCell:"#bd ul", effect:"fold",autoPlay:"true",
 <div class="fwbottom">
 		<div class="fwbottom_bottomInfo">
 				<div class="siteBottomNav">
-<ul>
-
-      	<li><a href='/anli/list_5_1.html' ><span>案例展示</span></a></li>
-      	<li class='hover'><a href='/about/'  rel='dropmenu2'><span>关于我们</span></a></li>
-      	<li><a href='/news/'  rel='dropmenu3'><span>新闻动态</span></a></li>
-      	
-      	<li><a href='/job/'  rel='dropmenu6'><span>人才招聘</span></a></li>
-      	
-      	<li><a href='/lianxi/' ><span>联系我们</span></a></li>
-      	
-      	<li><a href='/chanpin/'  rel='dropmenu4'><span>产品中心</span></a></li>
-      	
-<div class="clear"></div>
-</ul>
-</div>
-<div class="bottomInfo clear">
-	<p align="center">
-	<span style="color:#fff;"><a href="http://www.xgwu.net" target="_blank">享购屋</a></span> 
-</p>
+{% include "foot.html" %}
 </div>
 
 		</div>
